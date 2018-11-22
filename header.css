@@ -1,0 +1,43 @@
+h1#title {
+  font-size: 45px;
+}
+h1#title::first-letter {
+  font-size: 70px;
+}
+#catImage {
+  height: 70px;
+  margin: 0 0 0 15px;
+}
+
+.hr {
+  border: solid 1px #f4b552;
+  margin: -15px auto 0 auto;
+  height: 2px;
+  width: 80%;
+}
+
+
+#subimg {
+  height: 30px;
+  margin: 0 10px;
+}
+#titlesubtext {
+  color: #f4b552;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+@keyframes text-in {
+  0% {
+    transform: translate(0, -25px);
+    opacity: 0;
+  }
+}
+
+.item {
+  display: inline-block;
+  min-width: 0.3em;
+  font-size: 2rem;
+  animation: text-in 1s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
+}

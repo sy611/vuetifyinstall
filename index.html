@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <title>Cat Vuetify Test</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="./node_modules/vuetify/dist/vuetify.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="header.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <!-- <component-header 
+        subimg="https://storage.googleapis.com/catindev/static/image/Finder_Orange256.png" 
+        titlesubname="Finder"
+      >
+      </component-header>
+      <component-header></component-header> -->
+
+
+      <div>
+        <h1 id="title" class="text-xs-center text--cat font-productsans">
+          Cat<img id="catImage" src="https://storage.googleapis.com/catindev/static/image/Cat_Orange256.png">
+        </h1>
+        <div class="hr"></div>
+        <div id="titleSubDiv">
+          <p id="titleSubP" class="text-xs-center">
+            <text-anime 
+              subimg="https://storage.googleapis.com/catindev/static/image/Finder_Orange256.png"
+              text="Finder"
+            >
+            </text-anime>
+          </p>
+          
+        </div>
+      </div>
+      <!-- <p class="text--cat">{{ message }}</p> -->
+
+      <v-form @submit.prevent="execForm" v-model="valid">
+        <v-container fill-height align-end>
+          <v-layout row wrap>
+            <v-flex md6 offset-md3 lg4　offset-lg4>
+              <v-text-field 
+                v-model="caseNum" 
+                label="案件管理番号" 
+                append-icon="search"
+                clearable
+                @click:append="clickSearch(caseNum, valid)"
+                required
+              >
+              </v-text-field>
+            </v-flex>
+          </v-layout>
+         
+        </v-container>
+      </v-form>
+      <v-container>
+        <v-layout row wrap justify-space-around align-center>
+          <v-flex xs6 sm3>
+            <v-card :ripple="rippleCat" class="tools" flat>
+              <v-img src="static/image/Cat_Orange128.png" alt="Cat" height="40" contain aspect-ratio="1"></v-img>
+            </v-card>
+          </v-flex>
+          <v-flex xs6 sm3>
+            <v-card :ripple="rippleCat" class="tools">
+              <v-img src="static/image/Cat_Orange128.png" alt="Cat">
+            </v-card>
+          </v-flex>
+          <v-flex xs6 sm3>
+            <v-card :ripple="rippleCat" class="tools">
+              <v-img src="static/image/Question_Orange256.png" alt="Cat">
+            </v-card>
+          </v-flex>
+          <v-flex xs6 sm3>
+            <v-card :ripple="rippleCat" class="tools">
+              <v-img src="static/image/CatTrimmerLogoOrangeVer.2_128.png" alt="Cat">
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-app>
+
+  </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./node_modules/vuetify/dist/vuetify.js"></script>
+  <script src="component.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
