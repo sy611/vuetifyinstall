@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="header.css">
 
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
@@ -23,21 +24,31 @@
       <component-header></component-header> -->
 
 
-      <div>
-        <h1 id="title" class="text-xs-center text--cat font-productsans">
-          Cat<img id="catImage" src="https://storage.googleapis.com/catindev/static/image/Cat_Orange256.png">
-        </h1>
-        <div class="hr"></div>
-        <div id="titleSubDiv">
-          <p id="titleSubP" class="text-xs-center">
-            <text-anime 
-              subimg="https://storage.googleapis.com/catindev/static/image/Finder_Orange256.png"
-              text="Finder"
-            >
-            </text-anime>
-          </p>
-          
-        </div>
+      <div id="header">
+        <v-container>
+          <v-layout align-center justify-center row>
+            <v-flex xs10 offset-xs1>
+              <div id="header-border">
+                <div id="header-content">
+                  <h1 id="title" class="text-xs-center text--cat font-productsans">
+                    Cat<img id="catImage" src="https://storage.googleapis.com/catindev/static/image/Cat_Orange256.png">
+                  </h1>
+                  <!-- <div class="hr"></div> -->
+                  <div id="titleSubDiv">
+                    <p id="titleSubP" class="text-xs-center font-productsans">
+                      <text-anime 
+                        subimg="https://storage.googleapis.com/catindev/static/image/Finder_Orange256.png"
+                        text="Finder"
+                      >
+                      </text-anime>
+                  </p>
+                  </
+                </div>
+              </div>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        
       </div>
       <!-- <p class="text--cat">{{ message }}</p> -->
 
@@ -58,12 +69,103 @@
           </v-layout>
          
         </v-container>
+        <v-container fill-height align-end>
+          <v-layout row wrap>
+            <v-flex md6 offset-md3 lg4　offset-lg4>
+              <v-text-field 
+                v-model="caseNum" 
+                label="案件管理番号" 
+                append-icon="search"
+                clearable
+                @click:append="clickSearch(caseNum, valid)"
+                required
+              >
+              </v-text-field>
+            </v-flex>
+          </v-layout>
+         
+        </v-container>
+        <v-container fill-height align-end>
+          <v-layout row wrap>
+            <v-flex md6 offset-md3 lg4　offset-lg4>
+              <v-text-field 
+                v-model="caseNum" 
+                label="案件管理番号" 
+                append-icon="search"
+                clearable
+                @click:append="clickSearch(caseNum, valid)"
+                required
+              >
+              </v-text-field>
+            </v-flex>
+          </v-layout>
+         
+        </v-container>
+        <v-container fill-height align-end>
+          <v-layout row wrap>
+            <v-flex md6 offset-md3 lg4　offset-lg4>
+              <v-text-field 
+                v-model="caseNum" 
+                label="案件管理番号" 
+                append-icon="search"
+                clearable
+                @click:append="clickSearch(caseNum, valid)"
+                required
+              >
+              </v-text-field>
+            </v-flex>
+          </v-layout>
+         
+        </v-container>
       </v-form>
+
       <v-container>
-        <v-layout row wrap justify-space-around align-center>
+        <v-layout row wrap　align-center>
+          <v-flex xs6 sm3>
+            <v-tooltip bottom>
+              <div class="img-circle" v-ripple="rippleCat" slot="activator">
+                <img src="static/image/Cat_Orange128.png">
+              </div>
+              <span>Cat</span>
+            </v-tooltip>
+          </v-flex>
+          <v-flex xs6 sm3>
+            <v-tooltip bottom>
+              <div class="img-circle" v-ripple="rippleCat" slot="activator">
+                <img src="static/image/Cat_Orange128.png">
+              </div>
+              <span>各種申請フォーム</span>
+            </v-tooltip>
+          </v-flex>
+          <v-flex xs6 sm3>
+            <v-tooltip bottom>
+              <div class="img-circle" v-ripple="rippleCat" slot="activator">
+                <img src="static/image/Question_Orange256.png">
+              </div>
+              <span>なぜなぜ分析</span>
+            </v-tooltip>
+          </v-flex>
+          <v-flex xs6 sm3>
+            <v-tooltip bottom>
+              <div class="img-circle" v-ripple="rippleCat" slot="activator">
+                <img src="static/image/Trimmer_Orange256.png">
+              </div>
+              <span>Cat Trimmer</span>
+            </v-tooltip>
+          </v-flex>
+        </v-layout>
+      </v-container>
+
+
+
+      <!-- <v-container>
+        <v-layout row wrap　align-center>
           <v-flex xs6 sm3>
             <v-card :ripple="rippleCat" class="tools" flat>
-              <v-img src="static/image/Cat_Orange128.png" alt="Cat" height="40" contain aspect-ratio="1"></v-img>
+              <v-img src="static/image/Cat_Orange128.png" alt="Cat" contain></v-img>
+              <v-card-title primary-title>
+                <div class="headline">Cat</div>
+              </v-card-title>
             </v-card>
           </v-flex>
           <v-flex xs6 sm3>
@@ -82,7 +184,7 @@
             </v-card>
           </v-flex>
         </v-layout>
-      </v-container>
+      </v-container> -->
     </v-app>
 
   </div>
