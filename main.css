@@ -3,6 +3,7 @@
 }
 
 body {
+  background-color: #fafafa;
   /* background-color: #f0c16b !important; */
   /* padding: 10px; */
 }
@@ -16,7 +17,7 @@ body {
 
 #app {
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
 }
 
 
@@ -58,3 +59,14 @@ body {
   border-color: #f4b552 !important;
 }
 
+
+.v-expansion-panel__header {
+  background-color: #f4b552;
+  color: #fff !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.v-expansion-panel__header * {
+  color: #fff !important;
+}

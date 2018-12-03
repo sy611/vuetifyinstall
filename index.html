@@ -25,7 +25,36 @@
       </component-header>
       <component-header></component-header> -->
 
-      <div id="header">
+      <v-toolbar fixed color="primary" extend prominent dark>
+        <v-toolbar-side-icon></v-toolbar-side-icon>
+        <v-toolbar-title slot="extension" class="white--text" text-center>
+          <div id="header">
+            <!-- <v-container >
+              <v-layout align-center justify-center row>
+                <v-flex> -->
+                  <div id="header-border">
+                    <div id="header-content">
+                      <h1 id="title" class="text-xs-center text--white font-productsans">
+                        Cat<img id="catImage" src="https://storage.googleapis.com/catindev/static/image/Cat_White256.png">
+                      </h1>
+                      <!-- <div class="hr"></div> -->
+                      <div id="titleSubDiv">
+                        <p id="titleSubP" class="text-xs-center font-productsans">
+                          <text-anime subimg="https://storage.googleapis.com/catindev/static/image/Finder_White256.png" text="Finder">
+                          </text-anime>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                <!-- </v-flex>
+              </v-layout>
+            </v-container> -->
+          
+          </div>
+        </v-toolbar-title>
+      </v-toolbar>
+
+      <!-- <div id="header">
         <v-container>
           <v-layout align-center justify-center row>
             <v-flex>
@@ -34,7 +63,7 @@
                   <h1 id="title" class="text-xs-center text--cat font-productsans">
                     Cat<img id="catImage" src="https://storage.googleapis.com/catindev/static/image/Cat_Orange256.png">
                   </h1>
-                  <!-- <div class="hr"></div> -->
+                   <div class="hr"></div> 
                   <div id="titleSubDiv">
                     <p id="titleSubP" class="text-xs-center font-productsans">
                       <text-anime 
@@ -50,13 +79,13 @@
           </v-layout>
         </v-container>
         
-      </div>
-      <!-- <p class="text--cat">{{ message }}</p> -->
+      </div> -->
 
       <v-form @submit.prevent="execForm" v-model="valid">
         <v-container fill-height align-end>
-          <v-layout row wrap>
-            <v-flex md6 offset-md3 lg4　offset-lg4>
+          <v-layout row wrap justify-center>
+            <!-- <v-flex md4 offset-md3 lg4　offset-lg4> -->
+            <v-flex xs12 sm6>
               <v-text-field 
                 v-model="caseNum" 
                 label="案件管理番号" 
@@ -71,7 +100,7 @@
          
         </v-container>
       </v-form>
-      <div>
+      <div class="mt-5">
         <v-expansion-panel v-model="panel" expand popout>
           <v-expansion-panel-content>
             <div slot="header">201707-015 : 株式会社○×</div>
@@ -79,49 +108,73 @@
               <v-card-title>
                 タイトル 
               </v-card-title>
-              <V-card-text>
+              <v-card-text>
                 testtesttesttest
-              </V-card-text>
+              </v-card-text>
+              <v-card-actions>
+                <v-container>
+                  <v-layout row wrap　align-center>
+                    <v-flex>
+                      <v-tooltip bottom>
+                        <div class="img-circle" v-ripple="rippleCat" slot="activator">
+                          <img src="static/image/Cat_Orange128.png">
+                        </div>
+                        <span>Cat</span>
+                      </v-tooltip>
+                    </v-flex>
+                    <v-flex>
+                      <v-tooltip bottom>
+                        <div class="img-circle" v-ripple="rippleCat" slot="activator">
+                          <img src="static/image/Cat_Orange128.png">
+                        </div>
+                        <span>各種申請フォーム</span>
+                      </v-tooltip>
+                    </v-flex>
+                    <v-flex>
+                      <v-tooltip bottom>
+                        <div class="img-circle" v-ripple="rippleCat" slot="activator">
+                          <img src="static/image/Question_Orange256.png">
+                        </div>
+                        <span>なぜなぜ分析</span>
+                      </v-tooltip>
+                    </v-flex>
+                    <v-flex>
+                      <v-tooltip bottom>
+                        <div class="img-circle" v-ripple="rippleCat" slot="activator">
+                          <img src="static/image/Trimmer_Orange256.png">
+                        </div>
+                        <span>Cat Trimmer</span>
+                      </v-tooltip>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-card-actions>
+              
+              <v-card-actions>
+                <v-container>
+                  <v-layout row align-center justify-cente>
+                    <v-flex>
+                      <v-btn color="grey darken-1" :ripple="false" flat @click="show = !show">
+                        <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
+                        案件詳細を確認
+                      </v-btn>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-card-actions>
+
+              <v-slide-y-transition>
+                <v-card-text v-show="show">
+                  I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping,
+                  soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two
+                  zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
+                </v-card-text>
+              </v-slide-y-transition>
             </v-card>
           </v-expansion-panel-content>
         </v-expansion-panel>
       </div>
-      <v-container>
-        <v-layout row wrap　align-center>
-          <v-flex xs6 sm3>
-            <v-tooltip bottom>
-              <div class="img-circle" v-ripple="rippleCat" slot="activator">
-                <img src="static/image/Cat_Orange128.png">
-              </div>
-              <span>Cat</span>
-            </v-tooltip>
-          </v-flex>
-          <v-flex xs6 sm3>
-            <v-tooltip bottom>
-              <div class="img-circle" v-ripple="rippleCat" slot="activator">
-                <img src="static/image/Cat_Orange128.png">
-              </div>
-              <span>各種申請フォーム</span>
-            </v-tooltip>
-          </v-flex>
-          <v-flex xs6 sm3>
-            <v-tooltip bottom>
-              <div class="img-circle" v-ripple="rippleCat" slot="activator">
-                <img src="static/image/Question_Orange256.png">
-              </div>
-              <span>なぜなぜ分析</span>
-            </v-tooltip>
-          </v-flex>
-          <v-flex xs6 sm3>
-            <v-tooltip bottom>
-              <div class="img-circle" v-ripple="rippleCat" slot="activator">
-                <img src="static/image/Trimmer_Orange256.png">
-              </div>
-              <span>Cat Trimmer</span>
-            </v-tooltip>
-          </v-flex>
-        </v-layout>
-      </v-container>
+  
 
 
 
