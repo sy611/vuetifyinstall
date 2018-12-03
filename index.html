@@ -14,7 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-  <div id="app">
+  <div id="headline"></div>
+  
+  <div id="app" v-cloak>
     <v-app>
       <!-- <component-header 
         subimg="https://storage.googleapis.com/catindev/static/image/Finder_Orange256.png" 
@@ -23,11 +25,10 @@
       </component-header>
       <component-header></component-header> -->
 
-
       <div id="header">
         <v-container>
           <v-layout align-center justify-center row>
-            <v-flex xs10 offset-xs1>
+            <v-flex>
               <div id="header-border">
                 <div id="header-content">
                   <h1 id="title" class="text-xs-center text--cat font-productsans">
@@ -41,8 +42,8 @@
                         text="Finder"
                       >
                       </text-anime>
-                  </p>
-                  </
+                    </p>
+                  </div>
                 </div>
               </div>
             </v-flex>
@@ -69,56 +70,22 @@
           </v-layout>
          
         </v-container>
-        <v-container fill-height align-end>
-          <v-layout row wrap>
-            <v-flex md6 offset-md3 lg4　offset-lg4>
-              <v-text-field 
-                v-model="caseNum" 
-                label="案件管理番号" 
-                append-icon="search"
-                clearable
-                @click:append="clickSearch(caseNum, valid)"
-                required
-              >
-              </v-text-field>
-            </v-flex>
-          </v-layout>
-         
-        </v-container>
-        <v-container fill-height align-end>
-          <v-layout row wrap>
-            <v-flex md6 offset-md3 lg4　offset-lg4>
-              <v-text-field 
-                v-model="caseNum" 
-                label="案件管理番号" 
-                append-icon="search"
-                clearable
-                @click:append="clickSearch(caseNum, valid)"
-                required
-              >
-              </v-text-field>
-            </v-flex>
-          </v-layout>
-         
-        </v-container>
-        <v-container fill-height align-end>
-          <v-layout row wrap>
-            <v-flex md6 offset-md3 lg4　offset-lg4>
-              <v-text-field 
-                v-model="caseNum" 
-                label="案件管理番号" 
-                append-icon="search"
-                clearable
-                @click:append="clickSearch(caseNum, valid)"
-                required
-              >
-              </v-text-field>
-            </v-flex>
-          </v-layout>
-         
-        </v-container>
       </v-form>
-
+      <div>
+        <v-expansion-panel v-model="panel" expand popout>
+          <v-expansion-panel-content>
+            <div slot="header">201707-015 : 株式会社○×</div>
+            <v-card>
+              <v-card-title>
+                タイトル 
+              </v-card-title>
+              <V-card-text>
+                testtesttesttest
+              </V-card-text>
+            </v-card>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </div>
       <v-container>
         <v-layout row wrap　align-center>
           <v-flex xs6 sm3>
